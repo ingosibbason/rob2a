@@ -1,0 +1,53 @@
+Rotations = 360
+
+DriveForward()
+TurnLeft()
+TurnRight()
+
+Main
+	{
+		distance = 1.59 
+		spins = 360 * distance
+		RESET ENCODERS
+
+		DRIVE 0.5 m
+
+		RESET ENCODERS
+		STOP MOTORS
+		WAIT1ms
+
+		TurnLeft()
+
+		RESET ENCODERS
+		STOP MOTORS
+		WAIT1ms
+
+		DRIVE 0.5 m
+
+		TurnRight()
+
+		RESET ENCODERS
+		STOP MOTORS
+		WAIT1ms
+
+		DRIVE 0.5 m
+
+		RESET ENCODERS
+		STOP MOTORS
+		WAIT1ms
+
+		TurnRight()
+
+		RESET ENCODERS
+		STOP MOTORS
+		WAIT1ms
+
+		DRIVE 0.5 m
+
+
+		RESET ENCODERS
+		STOP MOTORS
+		WAIT1ms
+
+
+	}

@@ -14,7 +14,7 @@
 #pragma config(Motor,  port4,           armMotor,      tmotorServoContinuousRotation, openLoop)
 #pragma config(Motor,  port5,           clawMotor,     tmotorServoContinuousRotation, openLoop)
 
-const float rotations = 360.0;
+const float rotations = 360.0; // one rotation of the wheel is 360 degrees
 
 void driveForward(){
 	if(SensorValue[rightEncoder] == SensorValue[leftEncoder]) // If rightEncoder has counted the same amount as leftEncoder:
@@ -70,9 +70,8 @@ void TurnRight(float r)
 task main()
 {
 
-	float distance = 1.59;
-	float spins  = 360 * distance;
-
+	float distance = 1.59; // how many spins of the wheel are needed to go 0.5 m
+	float spins  = 360 * distance; //how many degrees the wheel needs to go to 0.5 m
 	SensorValue[rightEncoder] = 0;
   SensorValue[leftEncoder] = 0;
 	while(SensorValue[rightEncoder]< spins && SensorValue[leftEncoder] < spins)
