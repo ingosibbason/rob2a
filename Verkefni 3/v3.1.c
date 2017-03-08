@@ -23,11 +23,11 @@ task main ()
 		motor[rightMotor] = (vexRT[Ch2] - vexRT[Ch1])/2;  // (y - x)/2
 
 // Raise, lower or do not move arm
-		if(vexRT[Btn5D] == 1)       	//If button 5U is pressed...
+		if(vexRT[Btn5U] == 1)       	//If button 5U is pressed...
 		{
 			motor[armMotor] = 127;    	//...raise the arm.
 		}
-		else if(vexRT[Btn5U] == 1)  	//Else, if button 5D is pressed...
+		else if(vexRT[Btn5D] == 1)  	//Else, if button 5D is pressed...
 		{
 			motor[armMotor] = -127;   	//...lower the arm.
 		}
