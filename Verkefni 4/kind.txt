@@ -1,0 +1,45 @@
+Task killswitch
+(
+	if button 8r is pressed
+	(
+		Kill all tasks
+	)
+)
+
+Task lights off
+(
+	if lights in the room go off
+	(
+		Kill all tasks
+	)
+)
+
+drive straight
+(
+	if robot is not driving straight, coorect it
+)
+turn right
+(
+	Turn 90 degrees right
+)
+
+Task main
+(
+	Run killswitch
+
+	If lights in room are off
+	(
+		stay here
+	)
+
+	Run lights off
+
+	drive around room forever
+	(
+		drive straight()
+		if sonar detects a close obstacle
+		(
+			turn right()
+		)
+	)
+)
