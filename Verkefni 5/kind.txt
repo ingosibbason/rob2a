@@ -1,0 +1,30 @@
+Task emergencyBrake()
+{
+	If(button 8R is pressed)
+	{
+		Stop all tasks
+	}
+}
+void DriveForward()
+
+Task main()
+{
+	wait for 10 milliseconds
+	startTask(emergencyBrake)
+	forever()
+	{
+		if(right sensor sees darkness)
+		{
+			turn right
+		}
+		if(left sensor sees darkness)
+		{
+			turn left
+		}
+		if(center sensor sees darkness)
+		{
+			driveForward()
+		}
+
+	}
+}
